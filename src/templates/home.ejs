@@ -1,0 +1,9 @@
+<%= require('html-loader!./includes/head.html') %>
+<body>
+  <%= require('html-loader!./includes/header.html') %>
+  <div class="wrapper">
+    <h1><%= htmlWebpackPlugin.options.title %></h1>
+    <h2>Rating Widget</h2>
+    <div id="rating-widget"></div>
+  </div>
+</body>

@@ -1,0 +1,15 @@
+node_modules
+coverage
+.idea
+npm-debug.log
+dist
+spritesmith-generated
+html/dist
+.node-version
+.DS_Store
+.vscode
+*.orig
+.tern-project
+.flowconfig
+.*.un~
+

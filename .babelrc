@@ -1,0 +1,31 @@
+{
+  "env": {
+    "development": {
+      "presets": [
+        ["env", {
+          "targets": {
+            "browsers": [
+              "last 2 Chrome versions"
+            ]
+          }
+        }],
+        "react",
+        "stage-2"
+      ]
+    },
+    "production": {
+      "presets": [
+        ["env", {
+          "targets": {
+            "browsers": [
+              "last 3 versions",
+              "IE 11"
+            ]
+          }
+        }],
+        "react",
+        "stage-2"
+      ]
+    }
+  }
+}

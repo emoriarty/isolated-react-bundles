@@ -5,7 +5,7 @@ function generatePluginsConfigFromBundles (bundles, plugins) {
     .map(function (bundle) {
       return new HtmlWebpackPlugin(bundle);
     })
-    .concat(plugins);
+    .concat(plugins || []);
 }
 
 module.exports = {

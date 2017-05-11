@@ -3,7 +3,7 @@ import Star from '../Star';
 
 import './Rating.scss';
 
-const RatingWidget = ({ size, rating }) => {
+const Rating = ({ size = 5, rating = 3 }) => {
   var starItems = [];
   for (let i = 0; i < size; i++) {
     starItems.push(
@@ -18,4 +18,4 @@ const RatingWidget = ({ size, rating }) => {
   );
 };
 
-export default RatingWidget;
+export default Rating;

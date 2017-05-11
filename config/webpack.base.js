@@ -24,7 +24,12 @@ module.exports = {
       }]
     }, {
       test: /\.(png|jpg|gif|svg)$/,
-      use: 'file-loader'
+      use: {
+        loader: 'file-loader',
+        query: {
+          outputPath: 'assets/images/'
+        }
+      }
     }, {
       test: /\.(html|ejs)$/,
       use: 'html-loader',

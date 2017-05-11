@@ -1,5 +1,6 @@
 module.exports = {
   entries: {
+    all: './src/bundles/all.js',
     home: './src/bundles/home.js'
   },
   bundles: [{
@@ -12,5 +13,10 @@ module.exports = {
     chunks: ['home'],
     filename: 'bundles/home.html',
     template: 'src/templates/home.ejs'
+  }, {
+    title: 'All Components',
+    chunks: ['all'],
+    filename: 'bundles/all.html',
+    template: 'src/templates/all.ejs'
   }]
 };

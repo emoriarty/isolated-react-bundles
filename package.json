@@ -4,8 +4,7 @@
   "description": "",
   "scripts": {
     "start": "webpack-dev-server --inline --progress",
-    "build": "webpack",
-    "build:lib": "webpack",
+    "build": "NODE_ENV=development webpack",
     "test": "tape -r ignore-styles -r babel-register test/**/*.js | faucet"
   },
   "author": "",

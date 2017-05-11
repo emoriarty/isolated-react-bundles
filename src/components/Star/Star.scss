@@ -1,0 +1,9 @@
+.component {
+  &.star {
+    color: #bbb;
+  }
+
+  &.star--active {
+    color: #FFD700;
+  }
+}

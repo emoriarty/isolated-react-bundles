@@ -2,7 +2,7 @@
 <body>
   <%= require('html-loader!./includes/header.html') %>
   <div class="wrapper">
-    <h1><%= htmlWebpackPlugin.options.title %></h1>
+    <h2><%= htmlWebpackPlugin.options.title %></h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eros eros,
     lacinia fringilla massa sit amet, placerat viverra odio. Integer in augue ut
     nisi euismod molestie. Donec vestibulum velit in odio faucibus fermentum.
@@ -12,7 +12,7 @@
     malesuada. Sed id nisi sit amet orci faucibus tincidunt. Duis fringilla augue eu
     leo viverra luctus. Nulla facilisi. Cras vel porttitor lectus. Mauris est
     libero, interdum nec orci eu, mollis porta erat. Nulla facilisi.</p>
-    <h2>Component bundles</h2>
+    <h3>Component bundles</h3>
     <ul>
       <% for(var chunk in htmlWebpackPlugin.files.chunks) { %>
         <li>

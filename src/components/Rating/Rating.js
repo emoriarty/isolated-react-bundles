@@ -1,5 +1,7 @@
 import React from 'react';
-import Star from '../components/Star';
+import Star from '../Star';
+
+import './Rating.scss';
 
 const RatingWidget = ({ size, rating }) => {
   var starItems = [];
@@ -12,7 +14,7 @@ const RatingWidget = ({ size, rating }) => {
   }
 
   return (
-    <ul className="rating-widget">{starItems}</ul>
+    <ul className="component rating-widget">{starItems}</ul>
   );
 };
 

@@ -10,11 +10,13 @@
       font-family: "Helvetica neue";
       margin: 0;
     }
-
     header {
       background-color: #000;
       color: #fff;
-      padding: 1.3em;
+    }
+    header .wrapper {
+      padding-top: 1em;
+      padding-bottom: 1em;
     }
     header a {
       color: #fff;
@@ -23,10 +25,29 @@
     header a:hover {
       text-decoration: underline;
     }
-
+    .header-banner {
+      margin: 0;
+    }
+    .header-banner a {
+      display: table;
+    }
+    .header-banner a > * {
+      margin-right: 1em;
+    }
+    .header-banner-logo {
+      display: table-cell;
+      vertical-align: middle;
+      width: 100px;
+    }
+    .header-banner-title {
+      display: table-cell;
+      vertical-align: middle;
+      margin: 0;
+    }
     .wrapper {
       margin: 0 auto;
-      width: 960px;
+      max-width: 960px;
+      padding: 0 15px;
     }
     .header-title {
       font-size: 2em;

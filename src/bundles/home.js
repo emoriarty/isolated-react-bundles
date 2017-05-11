@@ -1,8 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import RatingWidget from '../widgets/Rating';
+import RatingWidget from '../components/Rating';
 
-import '../../style/home.scss';
+import '../../style/components/common.scss';
+import '../../style/bundles/home.scss';
 
 const mountingRatingWidget = 
     document.getElementById('rating-widget');

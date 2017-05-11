@@ -1,6 +1,12 @@
+const path = require('path')
+const config = require('./config');
+
 module.exports = {
-  entry: {
-    home: './src/bundles/home.js'
+  entry: config.entries,
+  output: {
+    path: path.join(__dirname, '../dist'),
+    publicPath: '/',
+    filename: 'assets/js/[name].js'
   },
   module: {
     rules: [{
@@ -17,7 +23,10 @@ module.exports = {
         loader: 'sass-loader'
       }]
     }, {
-      test: /\.html$/,
+      test: /\.(png|jpg|gif|svg)$/,
+      use: 'file-loader'
+    }, {
+      test: /\.(html|ejs)$/,
       use: 'html-loader',
       include: '/src/templates'
     }]

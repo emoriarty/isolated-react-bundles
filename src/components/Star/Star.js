@@ -1,7 +1,9 @@
 import React from 'react';
 
+import './Star.scss';
+
 const Star = ({ isActive }) => {
-  const classNames = ['star'];
+  const classNames = ['component', 'star'];
   const activeClass = 'star--active';
 
   if (isActive) {

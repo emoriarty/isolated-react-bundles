@@ -1,3 +1,5 @@
+const CleanPlugin = require('clean-webpack-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const path = require('path')
 const config = require('./config');
 
@@ -15,13 +17,10 @@ module.exports = {
       exclude: '/node_modules/'
     }, {
       test: /\.(scss|sass)$/,
-      use: [{
-        loader: 'style-loader'
-      }, {
-        loader: 'css-loader'
-      }, {
-        loader: 'sass-loader'
-      }]
+      use: ExtractTextPlugin.extract({
+        fallback: 'style-loader',
+        use: ['css-loader', 'sass-loader']
+      })
     }, {
       test: /\.(png|jpg|gif|svg)$/,
       use: {
@@ -35,5 +34,9 @@ module.exports = {
       use: 'html-loader',
       include: '/src/templates'
     }]
-  }
+  },
+  plugins: [
+    new CleanPlugin(['dist'], { root: path.resolve(__dirname, '..') }),
+    new ExtractTextPlugin('assets/css/[name].css')
+  ]
 }
